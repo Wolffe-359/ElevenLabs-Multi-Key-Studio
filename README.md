@@ -1,8 +1,12 @@
 # ElevenLabs Multi-Key Studio
 
-A browser-based long-form text-to-speech studio powered by the ElevenLabs API.
+## All Your Accounts In One Place
 
-Users provide their own ElevenLabs API keys and can generate long-form narration, audiobooks, videos, podcasts, and voiceovers directly in the browser.
+ElevenLabs Multi-Key Studio is a browser-based long-form text-to-speech application that combines multiple ElevenLabs API keys into a single generation workflow.
+
+Instead of manually switching between accounts when credits run out, simply add all of your API keys and let the application automatically select the best key for each request.
+
+Generate audiobooks, narrations, podcasts, YouTube voiceovers, educational content, and other long-form audio without constantly monitoring account usage.
 
 ---
 
@@ -11,95 +15,151 @@ Users provide their own ElevenLabs API keys and can generate long-form narration
 ### Multi-Key Management
 
 - Add one or multiple ElevenLabs API keys
-- Add additional keys at any time
+- Add more keys at any time
 - Duplicate key detection
 - Remove keys individually
-- Test keys
-- Key status tracking
+- Test API keys
+- Automatic key validation
+- Key health monitoring
+
+### All Your Accounts In One Place
+
+Add API keys from as many ElevenLabs accounts as you like.
+
+The application automatically combines available usage across all supplied keys and treats them as a single generation pool.
+
+No account management is required.
+
+Simply paste your API keys and start generating.
 
 ### Automatic Key Rotation
 
-When a key runs out of credits or reaches a usage limit:
+When a key becomes unavailable or does not have enough remaining usage for the next generation:
 
-1. The current generation pauses
-2. The next available key is selected automatically
-3. Generation continues without user intervention
+1. The application automatically selects another available key
+2. Generation continues without interruption
+3. No manual account switching is required
 
 ### Long-Form Generation
 
-Generate scripts much larger than ElevenLabs' normal request limits.
+Generate content far larger than the normal request limits.
 
 The application automatically:
 
-- Splits text into chunks
-- Preserves sentence boundaries
-- Preserves paragraph boundaries when possible
-- Prevents mid-word cuts
+- Splits large scripts into chunks
+- Preserves paragraph boundaries where possible
+- Preserves sentence boundaries where possible
+- Avoids cutting words in half
+- Processes chunks sequentially
 
-### Voice Support
+### Voice Browser
 
-Built-in voices:
+Automatically loads available ElevenLabs voices.
 
-- Scotty (Australian English)
-- Rachel
+Features include:
 
-Custom voices:
+- Voice search
+- Voice filtering
+- Default ElevenLabs voices
+- Shared voices available to the supplied API keys
 
-- Any ElevenLabs Voice ID
-- Shared voices
-- Professional voices
-- Cloned voices
+### Generation Planner
+
+Before generation begins, the application estimates:
+
+- Script length
+- Estimated chunk count
+- Available usage across all loaded keys
+- Generation readiness
+
+This helps prevent failed generations before processing starts.
 
 ### Progress Tracking
 
-Live progress display:
+Live progress updates including:
 
 - Current chunk
 - Total chunks
-- Current API key
-- Estimated completion
-- Generation status
+- Active API key
+- Generation progress percentage
+- Status messages
+- Estimated completion progress
 
-### Usage Dashboard
+### Guest Mode
 
-Displays:
+No account is required.
 
-- Total keys loaded
-- Active key
-- Working keys
-- Exhausted keys
-- Estimated available generation capacity
+Users can:
 
-### Storage Modes
+- Open the application
+- Paste API keys
+- Generate audio immediately
 
-#### Guest Mode
+Refreshing the page removes all loaded keys.
 
-- No login required
-- Keys stored in memory only
-- Refreshing the page removes all keys
+### Remember Keys Mode
 
-#### Remember Keys Mode
+Optional browser-based storage.
 
-- Saves keys locally in browser storage
-- Automatically restores keys on future visits
-- No server required
+When enabled:
 
----
-
-## Planned Features
-
-- Audio chunk merging
-- ZIP downloads
-- WAV export
-- MP3 export
-- Voice presets
-- Script history
-- Usage analytics
-- Dark mode improvements
+- API keys are stored locally in the browser
+- Keys automatically reload on future visits
+- No server is required
 
 ---
 
-## Technology
+## How It Works
+
+### Step 1
+
+Add one or more ElevenLabs API keys.
+
+Example:
+
+```text
+sk_key_1
+sk_key_2
+sk_key_3
+```
+
+### Step 2
+
+Choose a voice.
+
+### Step 3
+
+Paste your script.
+
+### Step 4
+
+Generate audio.
+
+The application automatically:
+
+- Splits large scripts into chunks
+- Chooses the best available API key
+- Rotates keys when necessary
+- Tracks progress
+- Produces downloadable audio
+
+---
+
+## Intended Use Cases
+
+- YouTube narration
+- Audiobooks
+- Podcasts
+- Educational content
+- Documentary voiceovers
+- Story narration
+- Course creation
+- Long-form speech generation
+- AI voice workflows
+
+---
+
+## Technology Stack
 
 Frontend:
 
@@ -121,32 +181,42 @@ Storage:
 
 ---
 
-## Security
+## Privacy
 
-API keys are never hardcoded into the application.
+The application does not provide API keys.
 
-Each user supplies their own ElevenLabs API keys.
+Users must supply their own ElevenLabs API keys.
 
 Keys are stored only:
 
 - In browser memory
-- Or in local browser storage when "Remember Keys" is enabled
+- Or locally in browser storage when "Remember Keys" is enabled
 
 No backend server is required.
 
+No keys are shared with other users.
+
 ---
 
-## Intended Use Cases
+## Roadmap
 
-- YouTube narration
-- Audiobooks
-- Podcasts
-- Educational content
-- Long-form voiceovers
-- AI voice workflows
+Planned improvements include:
+
+- Audio merging
+- MP3 export improvements
+- WAV export
+- ZIP downloads
+- Advanced voice search
+- Usage analytics
+- Enhanced generation planning
+- Additional export formats
 
 ---
 
 ## License
 
 MIT License
+
+---
+
+Built for creators who want all their ElevenLabs accounts in one place.
